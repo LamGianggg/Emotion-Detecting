@@ -50,3 +50,17 @@
 - Delta_MFCC_C3_std
 - Delta_MFCC_C4_std
 - Delta_MFCC_C5_std
+
+# Libraries Used
+-   Python
+-   Librosa
+-   Ipython
+-   Glob
+-   Numpy
+-   Pandas
+-   Matplotlib.pyplot
+-   Os
+-   Seaborn
+-   Pathlib
+-   CSV
+-   Pytorch
