@@ -1,0 +1,8 @@
+10/4/2026   Create Dataset
+15/4/2026   Complete Dataset
+21/4/2026   Visualize Data
+            Fix Duplication Dataset
+
+---Up to 29/4/2026---
+Trainning with Random Forest Model and get ~90% Accuracy 
+
