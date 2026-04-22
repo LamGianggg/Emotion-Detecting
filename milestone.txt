@@ -1,0 +1,8 @@
+------Phase 1-----      ////Current////
+- Collecting Data           ✅
+- Extract Data to Csv file  ✅
+- Visualize Data            ✅
+- Trainning with some ML Models and get the highest Accuracy 
+
+-----Phase 2-----
+- Trainning with some DL Models and get the highest Accuracy
