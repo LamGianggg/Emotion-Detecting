@@ -8,3 +8,5 @@ Trainning with Random Forest Model and get ~90% Accuracy
 
 24/4/2026   Remove Null In Dataset
             Add RandomForest Model
+
+26/4/2026 Apply Optuna for hyperparameter tuning
