@@ -1,50 +1,71 @@
-# Thư mục `training` 
+# `training` directory
 
-## Phiên bản thư viện 
+## Pinned library versions
 
-| Thư viện   | Phiên bản | Gói pip        |
-|-----------|-----------|----------------|
+| Library | Version | pip package |
+|---------|---------|-------------|
 | scikit-learn (sklearn) | 1.8.0 | `scikit-learn` |
-| NumPy     | 2.4.4     | `numpy`        |
-| pandas    | 3.0.2     | `pandas`       |
-| Matplotlib| 3.10.8    | `matplotlib`   |
-| Seaborn   | 0.13.2    | `seaborn`      |
-| Optuna    | 4.8.0     | `optuna`       |
-| SciPy     | 1.17.1    | `scipy`        |
+| NumPy | 2.4.4 | `numpy` |
+| pandas | 3.0.2 | `pandas` |
+| Matplotlib | 3.10.8 | `matplotlib` |
+| Seaborn | 0.13.2 | `seaborn` |
+| Optuna | 4.8.0 | `optuna` |
+| SciPy | 1.17.1 | `scipy` |
 
+`requirements.txt` also includes **IPython**, **ipykernel**, and **Jupyter** for running `.ipynb` notebooks (minimum versions, not patch-pinned).
 
-## Cài đặt tất cả thư viện
+## Virtual environment (recommended)
 
-Từ thư mục `training` (hoặc chỉ định đường dẫn đầy đủ tới file):
+**Windows (PowerShell)** — from the project root `Emotion_detecting`:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+**macOS / Linux:**
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+## Install all dependencies
+
+From the `training` folder (or pass the full path to the file):
 
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
+Example (Windows, absolute path):
 
-## Kiểm tra phiên bản đã cài
+```powershell
+pip install -r "d:\Code\Python\Emotion_detecting\training\requirements.txt"
+```
+
+## Verify installed versions
 
 ```bash
 python -c "import sklearn, numpy, pandas, matplotlib, seaborn, optuna, scipy; print('sklearn', sklearn.__version__); print('numpy', numpy.__version__); print('pandas', pandas.__version__); print('matplotlib', matplotlib.__version__); print('seaborn', seaborn.__version__); print('optuna', optuna.__version__); print('scipy', scipy.__version__)"
 ```
 
 
-## Mở Jupyter
+## Launch Jupyter
 
 ```bash
 jupyter notebook
 ```
 
-hoặc dùng Jupyter trong VS Code / Cursor
+You can also use the Jupyter / notebook integration in VS Code or Cursor and select the Python interpreter (or kernel) where you installed these packages.
 
-## Xử lý lỗi thường gặp
+## Troubleshooting
 
-- **`sklearn` không tìm thấy trên pip:** cài bằng tên **`scikit-learn`** (đã có trong `requirements.txt`).
-- **Xung đột phiên bản:** tạo venv mới, chỉ cài `requirements.txt` trong venv đó rồi thử lại.
-- **Python quá cũ:** các bản NumPy 2.x / pandas 3.x thường cần Python mới (khuyến nghị Python 3.12 hoặc theo tài liệu từng gói tại thời điểm bạn cài).
+- **`sklearn` not found on pip:** install **`scikit-learn`** (already listed in `requirements.txt`).
+- **Version conflicts:** create a fresh venv, then only `pip install -r requirements.txt` inside it.
+- **Python too old:** NumPy 2.x / pandas 3.x typically need a recent Python (e.g. 3.12+ or whatever each package documents at install time).
 
-## Ghi chú
+## Notes
 
-- Dữ liệu mẫu cho notebook thường nằm ở `../dataset/all_emotions.csv` (xem `RF.md` / notebook).
-
+- Example data for the notebooks is usually at `../dataset/all_emotions.csv` (see `RF.md` and the notebooks).
